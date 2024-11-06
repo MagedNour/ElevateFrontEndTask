@@ -12,7 +12,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/ElevateFrontEndTask", element: <Layout />, children: [
-        { path: "", element: <Home /> },
+        { path: "/ElevateFrontEndTask", element: <Home /> },
         { path: "/ElevateFrontEndTask/product/:id", element: <ProductDetails /> }
       ]
     }

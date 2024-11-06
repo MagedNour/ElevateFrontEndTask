@@ -18,7 +18,7 @@ export default function Product({product}: {product:product}) {
             <div className="mt-4">
                 <div>
                     <h3 className="text-sm text-gray-700 cursor-pointer hover:text-black line-clamp-1">
-                        <Link to={`product/${product.id}`}>
+                        <Link to={`/ElevateFrontEndTask/product/${product.id}`}>
                             {product.title }
                         </Link>
                     </h3>
