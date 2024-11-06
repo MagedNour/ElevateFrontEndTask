@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { product } from '../../Interfaces/Product';
 import RatingStars from '../../Components/RatingStars/RatingStars';
@@ -9,7 +9,6 @@ import Loading from '../../Components/LoadingScreen/Loading';
 export default function ProductDetails() {
 
     const [product, setProduct] = useState<product>();
-    const [isLoading, setIsLoading] = useState(true);
     let { id } = useParams()
 
 
@@ -20,11 +19,11 @@ export default function ProductDetails() {
     async function getSpecificProduct() {
 
         try {
-            setIsLoading(true)
+            
             const data = await getProducts(id);
             setProduct(data);
             console.log(data);
-            setIsLoading(false)
+            
 
         } catch (error) {
             console.log("Failed to fetch products", error)
@@ -36,8 +35,6 @@ export default function ProductDetails() {
                 closeOnClick: true,
                 theme: "light",
             })
-        } finally {
-            setIsLoading(false);
         }
 
     }
@@ -45,7 +42,7 @@ export default function ProductDetails() {
     return (<>
 
         {!product ? <Loading /> : <div className="container mx-auto px-4 py-8">
-            <Link to="/" className="text-blue-500 hover:text-blue-700 mb-4 inline-block">
+            <Link to= {'/ElevateFrontEndTask'} className="text-blue-500 hover:text-blue-700 mb-4 inline-block">
                 &larr; Back to Products
             </Link>
 
