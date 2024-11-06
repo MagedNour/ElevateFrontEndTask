@@ -6,7 +6,7 @@ export default function Product({product}: {product:product}) {
     return (
         <div key={product.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none  lg:h-80">
-                <Link to={`product/${product.id}`}>
+                <Link to={`/ElevateFrontEndTask/product/${product.id}`}>
                     <img
                         alt={"Product Image of" + product.title}
                         src={product.image}

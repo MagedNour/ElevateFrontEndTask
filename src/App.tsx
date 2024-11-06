@@ -13,7 +13,7 @@ function App() {
     {
       path: "/ElevateFrontEndTask", element: <Layout />, children: [
         { path: "", element: <Home /> },
-        { path: "product/:id", element: <ProductDetails /> }
+        { path: "/ElevateFrontEndTask/product/:id", element: <ProductDetails /> }
       ]
     }
 
