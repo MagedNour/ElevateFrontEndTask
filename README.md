@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+The repository contains a simple React application designed to display products with a rating and price, allowing users to view product details.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Approach
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1- Component-Based Structure: The project is organized into 2 Pages (Home, ProductDetails), reusable components (Product, RatingStars, LoadingScreen), and 1 Service.
 
-## Expanding the ESLint configuration
+2- Data Fetching: used Axios in one Service to maintain clean and manageable code.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3-Styling: Used Tailwind CSS to streamline the styling process, which was my best choice for speed and responsive layout.
 
-- Configure the top-level `parserOptions` property like this:
+4-Error Handling: Notify the user of any issues with data fetching using react-toastify.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Running the Application Locally
+
+1- git clone https://github.com/MagedNour/ElevateFrontEndTask.git
+
+2- npm install
+
+3- npm run dev

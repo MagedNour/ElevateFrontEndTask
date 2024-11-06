@@ -56,7 +56,7 @@ export default function ProductDetails() {
                             loading="lazy"
                         />
                     </div>
-
+                    
                     <div className="lg:w-1/2 space-y-4">
                         <h1 className="text-2xl font-bold text-gray-900">{product.title}</h1>
                         <p className="text-lg text-gray-700">{product.description}</p>
